@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Dimensiones Physilab+-->
+
+    <dimen name="physilab.dimenGeneral">5dp</dimen>
+
+    <dimen name="physilab.dimenMarginLarge">5dp</dimen>
+    <dimen name="physilab.dimenMarginButtonMedium">3dp</dimen>
+
+    <dimen name="physilab.dimenPaddingLarge">5dp</dimen>
+    <dimen name="physilab.dimenPaddingMedium">3dp</dimen>
+
+    <dimen name="physilab.dimenRadius">7dp</dimen>
+
+    <dimen name="physilab.dimenBorderBold">1dp</dimen>
+
+    <dimen name="physilab.sizeTextTitle">20sp</dimen>
+    <dimen name="physilab.sizeTextEditTex">15sp</dimen>
+
+    <dimen name="physilab.sizeTextButtonLarge">20dp</dimen>
+    <dimen name="physilab.sizeTextButtonMedium">15sp</dimen>
+
+</resources>

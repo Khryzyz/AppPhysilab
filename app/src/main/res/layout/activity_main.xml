@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/physilab.dimenPaddingLarge"
+    tools:context=".app.Activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llyLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/physilab.dimenGeneral"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogoPhysilab"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/main.description.logoDescription"
+            android:cropToPadding="true"
+            android:maxHeight="5dp"
+            android:minHeight="5dp"
+            android:src="@mipmap/logo_physilab" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyConexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyLogo"
+        android:layout_marginTop="@dimen/physilab.dimenGeneral">
+
+            <TextView
+                android:id="@+id/txtConexion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/datosRecibidos.hint.esperandoConexion" />
+
+
+
+        <Button
+            android:id="@+id/btnConexionSocket"
+            style="@style/PhysilabButtonLargeStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_physilab"
+            android:onClick="intentarConexion"
+            android:text="@string/general.button.establecerConexion" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyModulosControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlyConexion"
+        android:layout_marginTop="@dimen/physilab.dimenGeneral"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnModuloPlanoInclinado"
+            style="@style/PhysilabButtonLargeStyle"
+            android:background="@drawable/button_physilab"
+            android:onClick="moduloPlanoInclinado"
+            android:text="@string/main.general.planoInclinado" />
+
+        <Button
+            android:id="@+id/btnModuloPenduloSimple"
+            style="@style/PhysilabButtonLargeStyle"
+            android:layout_below="@id/btnModuloPlanoInclinado"
+            android:background="@drawable/button_physilab"
+            android:onClick="moduloPenduloSimple"
+            android:text="@string/main.general.penduloSimple" />
+
+        <Button
+            android:id="@+id/btnMovimientoCircular"
+            style="@style/PhysilabButtonLargeStyle"
+            android:layout_below="@id/btnModuloPenduloSimple"
+            android:background="@drawable/button_physilab"
+            android:onClick="moduloMovimientoCircular"
+            android:text="@string/main.general.movimientoCircular" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyModulosControlBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlyModulosControl"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/frgControlBack"
+            class="co.org.ceindetec.physilab.app.Activities.Fragments.ControlBackFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_control_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyModulosPlanoInclinado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlyModulosControlBack"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/frgPlanoInclinado"
+            class="co.org.ceindetec.physilab.app.Activities.Fragments.PlanoInclinadoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_plano_inclinado" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyModulosPenduloSimple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlyModulosPlanoInclinado"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/frgPenduloSimple"
+            class="co.org.ceindetec.physilab.app.Activities.Fragments.PenduloSimpleFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_pendulo_simple" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyModulosMovimientoCircular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlyModulosPenduloSimple"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/frgMovimientoCircular"
+            class="co.org.ceindetec.physilab.app.Activities.Fragments.MovimientoCircularFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_movimiento_circular" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">PhysiLab</string>
+
+    <string name="main.description.logoDescription">Logo_Physilab+</string>
+    <string name="main.general.penduloSimple">Péndulo Simple</string>
+    <string name="main.general.movimientoCircular">Movimiento Circular</string>
+    <string name="main.general.planoInclinado">Plano Inclinado</string>
+
+    <string name="main.error.moduloNoCoincide">El módulo seleccionado no coincide con los datos recibidos</string>
+    <string name="main.error.moduloNoDatos">No se han recibido datos</string>
+    <string name="main.error.moduloNoConfiguracion">Debes ingresar todos los datos</string>
+
+    <string name="pi.error.angulo">El ángulo debe ser mayor a 5° y menor a 40°</string>
+    <string name="pi.error.distancia">La distancia debe ser mayor a 50cm y menor a 100cm</string>
+
+    <string name="mc.error.radio">El radio debe ser mayor a 1cm y menor a 15cm</string>
+
+    <string name="ps.error.angulo">El ángulo debe ser mayor a 1° y menor a 15°</string>
+    <string name="ps.error.longitud">La longitud debe ser mayor a 10cm y menor a 50cm</string>
+
+    <string name="general.button.guardarConfiguracion">Guardar Configuración</string>
+    <string name="general.button.editarConfiguracion">Editar Configuración</string>
+    <string name="general.button.datosRecibidos">Recibir Datos</string>
+    <string name="general.button.establecerConexion">Conectar</string>
+    <string name="general.button.evaluarResultados">Evaluar</string>
+    <string name="general.button.regresar">Regresar</string>
+
+    <string name="general.tab.configuracion">Configurar</string>
+    <string name="general.tab.recibir_datos">Recibir Datos</string>
+    <string name="general.tab.resultados">Comparar Resultados</string>
+
+    <string name="modulo.hint.configuracionAngulo">Ángulo (°)</string>
+    <string name="modulo.hint.configuracionAnguloDatos">%.2f°</string>
+    <string name="modulo.hint.configuracionMasa">Masa del objeto (g)</string>
+    <string name="modulo.hint.configuracionMasaDatos">%.2fg</string>
+    <string name="modulo.hint.configuracionDistancia">Distancia (cm)</string>
+    <string name="modulo.hint.configuracionDistanciaDatos">%.2fcm</string>
+    <string name="modulo.hint.configuracionLongitud">Longitud (cm)</string>
+    <string name="modulo.hint.configuracionLongitudDatos">%.2fcm</string>
+    <string name="modulo.hint.configuracionRadio">Radio (cm)</string>
+    <string name="modulo.hint.configuracionRadioDatos">%.2fcm</string>
+
+    <string name="datosRecibidos.hint.esperandoConexion">Esperando conexión...</string>
+    <string name="datosRecibidos.hint.estadoConectado">Conectado</string>
+    <string name="datosRecibidos.hint.estadoDesconectado">Desconectado</string>
+    <string name="datosRecibidos.hint.tiempoRecibidoSegundos">Tiempo segundos (s) </string>
+    <string name="datosRecibidos.hint.oscilacionRecibido">Número de oscilaciones</string>
+    <string name="datosRecibidos.hint.giroRecibidos">Número de giros</string>
+
+
+    <string name="resultados.hint.gravedad">Gravedad (cm/s²)</string>
+    <string name="resultados.hint.aceleracion">Aceleración (cm/s²)</string>
+    <string name="resultados.hint.aceleracionCentrifuga">Aceleración centrifuga (rad/s²)</string>
+    <string name="resultados.hint.frecuencia">Frecuencia (Hz)</string>
+    <string name="resultados.hint.periodo">Periodo (s)</string>
+    <string name="resultados.hint.distancia">Distancia (cm)</string>
+    <string name="resultados.hint.velocidadFinal">Velocidad final (cm/s)</string>
+    <string name="resultados.hint.velocidadAngular">Velocidad angular (rad/s)</string>
+    <string name="resultados.hint.velocidadTangencial">Velocidad tangencial (cm/s)</string>
+</resources>

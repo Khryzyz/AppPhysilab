@@ -1,0 +1,229 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.Activities.Fragments.PenduloSimpleFragment">
+
+    <TextView
+        android:id="@+id/txtTitlePenduloSimple"
+        style="@style/PhysilabTitleStyle"
+        android:text="@string/main.general.penduloSimple"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TabHost
+        android:id="@+id/tabPenduloSimple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitlePenduloSimple">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPenduloSimpleConfiguracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionAnguloPenduloSimple"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionAnguloPenduloSimple"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionAngulo"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionMasaPenduloSimple"
+                        style="@style/PhysilabWrapperEditTextStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionAnguloPenduloSimple">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionMasaPenduloSimple"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionMasa"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionLongitudPenduloSimple"
+                        style="@style/PhysilabWrapperEditTextStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionMasaPenduloSimple">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionLongitudPenduloSimple"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionLongitud"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnGuardaConfiguracionPenduloSimple"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionLongitudPenduloSimple"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="guardarConfiguracionPenduloSimple"
+                        android:text="@string/general.button.guardarConfiguracion" />
+
+                    <Button
+                        android:id="@+id/btnEditarConfiguracionPenduloSimple"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionLongitudPenduloSimple"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="editarConfiguracionPenduloSimple"
+                        android:text="@string/general.button.editarConfiguracion"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPenduloSimpleDatosRecibidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtDatosTiempoPenduloSimple"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtDatosTiempoPenduloSimple"
+                            style="@style/PhysilabEditTextStyle"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/datosRecibidos.hint.tiempoRecibidoSegundos"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtDatosCantidadOscilacionesPenduloSimple"
+                        style="@style/PhysilabWrapperEditTextStyle"
+                        android:layout_below="@id/wrpEdtDatosTiempoPenduloSimple">
+
+                        <EditText
+                            android:id="@+id/edtDatosCantidadOscilacionesPenduloSimple"
+                            style="@style/PhysilabEditTextStyle"
+                            android:layout_below="@id/edtDatosTiempoPenduloSimple"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/datosRecibidos.hint.oscilacionRecibido"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnRecibirDatosPenduloSimple"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtDatosCantidadOscilacionesPenduloSimple"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="recibirDatosPenduloSimple"
+                        android:text="@string/general.button.datosRecibidos" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPenduloSimpleResultados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosFrecuenciaPenduloSimple"
+                        style="@style/PhysilabWrapperEditResultTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtResultadosFrecuenciaPenduloSimple"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.frecuencia"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosFrecuenciaPenduloSimple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/wrpEdtResultadosFrecuenciaPenduloSimple"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosGravedadPenduloSimple"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosFrecuenciaPenduloSimple">
+
+                        <EditText
+                            android:id="@+id/edtResultadosGravedadPenduloSimple"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:layout_below="@id/edtResultadosFrecuenciaPenduloSimple"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.gravedad"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosGravedadPenduloSimple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosFrecuenciaPenduloSimple"
+                        android:layout_toEndOf="@id/wrpEdtResultadosGravedadPenduloSimple"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosPeriodoPenduloSimple"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosGravedadPenduloSimple">
+
+                        <EditText
+                            android:id="@+id/edtResultadosPeriodoPenduloSimple"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:layout_below="@id/edtResultadosGravedadPenduloSimple"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.periodo"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosPeriodoPenduloSimple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosGravedadPenduloSimple"
+                        android:layout_toEndOf="@id/wrpEdtResultadosPeriodoPenduloSimple"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <Button
+                        android:id="@+id/btnResultadosPenduloSimple"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtResultadosPeriodoPenduloSimple"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="evaluarDatosPenduloSimple"
+                        android:text="@string/general.button.evaluarResultados" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

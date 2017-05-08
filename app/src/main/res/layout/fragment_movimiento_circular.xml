@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.Activities.Fragments.MovimientoCircularFragment">
+
+    <TextView
+        android:id="@+id/txtTitleMovimientoCircular"
+        style="@style/PhysilabTitleStyle"
+        android:text="@string/main.general.movimientoCircular"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TabHost
+        android:id="@+id/tabMovimientoCircular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitleMovimientoCircular">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabMovimientoCircularConfiguracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionRadioMovimientoCircular"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionRadioMovimientoCircular"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionRadio"
+                            android:inputType="number" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnGuardaConfiguracionMovimientoCircular"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionRadioMovimientoCircular"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="guardarConfiguracionMovimientoCircular"
+                        android:text="@string/general.button.guardarConfiguracion" />
+
+                    <Button
+                        android:id="@+id/btnEditarConfiguracionMovimientoCircular"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionRadioMovimientoCircular"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="editarConfiguracionMovimientoCircular"
+                        android:text="@string/general.button.editarConfiguracion"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabMovimientoCircularDatosRecibidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtDatosTiempoMovimientoCircular"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtDatosTiempoMovimientoCircular"
+                            style="@style/PhysilabEditTextStyle"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/datosRecibidos.hint.tiempoRecibidoSegundos"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtDatosGirosMovimientoCircular"
+                        style="@style/PhysilabWrapperEditTextStyle"
+                        android:layout_below="@id/wrpEdtDatosTiempoMovimientoCircular">
+
+                        <EditText
+                            android:id="@+id/edtDatosGirosMovimientoCircular"
+                            style="@style/PhysilabEditTextStyle"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/datosRecibidos.hint.giroRecibidos"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnRecibirDatosMovimientoCircular"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtDatosGirosMovimientoCircular"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="recibirDatosMovimientoCircular"
+                        android:text="@string/general.button.datosRecibidos" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabMovimientoCircularResultados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosVangularMovimientoCircular"
+                        style="@style/PhysilabWrapperEditResultTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtResultadosVangularMovimientoCircular"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.velocidadAngular"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosVangularMovimientoCircular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/wrpEdtResultadosVangularMovimientoCircular"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosVtangencialMovimientoCircular"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosVangularMovimientoCircular">
+
+                        <EditText
+                            android:id="@+id/edtResultadosVtangencialMovimientoCircular"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.velocidadTangencial"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosVtangencialMovimientoCircular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosVangularMovimientoCircular"
+                        android:layout_toEndOf="@id/wrpEdtResultadosVtangencialMovimientoCircular"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosAceleracionCentripetaMovimientoCircular"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosVtangencialMovimientoCircular">
+
+                        <EditText
+                            android:id="@+id/edtResultadosAceleracionCentripetaMovimientoCircular"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.aceleracionCentrifuga"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosAceleracionCentripetaMovimientoCircular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosVtangencialMovimientoCircular"
+                        android:layout_toEndOf="@id/wrpEdtResultadosAceleracionCentripetaMovimientoCircular"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosDistanciaMovimientoCircular"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosAceleracionCentripetaMovimientoCircular">
+
+                        <EditText
+                            android:id="@+id/edtResultadosDistanciaMovimientoCircular"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.distancia"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosDistanciaMovimientoCircular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosAceleracionCentripetaMovimientoCircular"
+                        android:layout_toEndOf="@id/wrpEdtResultadosDistanciaMovimientoCircular"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <Button
+                        android:id="@+id/btnResultadosMovimientoCircular"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtResultadosDistanciaMovimientoCircular"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="evaluarDatosMovimientoCircular"
+                        android:text="@string/general.button.evaluarResultados" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

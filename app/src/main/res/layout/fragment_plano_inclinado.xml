@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.Activities.Fragments.PlanoInclinadoFragment">
+
+    <TextView
+        android:id="@+id/txtTitlePlanoInclinado"
+        style="@style/PhysilabTitleStyle"
+        android:text="@string/main.general.planoInclinado"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TabHost
+        android:id="@+id/tabPlanoInclinado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitlePlanoInclinado">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPlanoInclinadoConfiguracion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionAnguloPlanoInclinado"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionAnguloPlanoInclinado"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionAngulo"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtConfiguracionDistanciaPlanoInclinado"
+                        style="@style/PhysilabWrapperEditTextStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionAnguloPlanoInclinado">
+
+                        <EditText
+                            android:id="@+id/edtConfiguracionDistanciaPlanoInclinado"
+                            style="@style/PhysilabEditTextStyle"
+                            android:hint="@string/modulo.hint.configuracionDistancia"
+                            android:inputType="number" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnGuardaConfiguracionPlanoInclinado"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionDistanciaPlanoInclinado"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="guardarConfiguracionPlanoInclinado"
+                        android:text="@string/general.button.guardarConfiguracion" />
+
+                    <Button
+                        android:id="@+id/btnEditarConfiguracionPlanoInclinado"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtConfiguracionDistanciaPlanoInclinado"
+                        android:background="@drawable/button_physilab"
+                        android:onClick="editarConfiguracionPlanoInclinado"
+                        android:text="@string/general.button.editarConfiguracion"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPlanoInclinadoDatosRecibidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtDatosTiempoPlanoInclinado"
+                        style="@style/PhysilabWrapperEditTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtDatosTiempoPlanoInclinado"
+                            style="@style/PhysilabEditTextStyle"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/datosRecibidos.hint.tiempoRecibidoSegundos"
+                            android:inputType="number" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnRecibirDatosPlanoInclinado"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtDatosTiempoPlanoInclinado"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="recibirDatosPlanoInclinado"
+                        android:text="@string/general.button.datosRecibidos" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlyTabPlanoInclinadoResultados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/physilab.dimenPaddingLarge"
+                    android:layout_marginTop="@dimen/physilab.dimenPaddingLarge"
+                    android:background="@drawable/panel_physilab">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosVelocidadPlanoInclinado"
+                        style="@style/PhysilabWrapperEditResultTextStyle">
+
+                        <EditText
+                            android:id="@+id/edtResultadosVelocidadPlanoInclinado"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.velocidadFinal"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosVelocidadPlanoInclinado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/wrpEdtResultadosVelocidadPlanoInclinado"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/wrpEdtResultadosAceleracionPlanoInclinado"
+                        style="@style/PhysilabWrapperEditResultTextStyle"
+                        android:layout_below="@id/wrpEdtResultadosVelocidadPlanoInclinado">
+
+                        <EditText
+                            android:id="@+id/edtResultadosAceleracionPlanoInclinado"
+                            style="@style/PhysilabEditResultTextStyle"
+                            android:layout_below="@id/edtResultadosVelocidadPlanoInclinado"
+                            android:enabled="false"
+                            android:hint="@string/resultados.hint.aceleracion"
+                            android:inputType="numberDecimal" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/imgResultadosAceleracionPlanoInclinado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wrpEdtResultadosVelocidadPlanoInclinado"
+                        android:layout_toEndOf="@id/wrpEdtResultadosAceleracionPlanoInclinado"
+                        android:src="@mipmap/icon_answer_wait" />
+
+                    <Button
+                        android:id="@+id/btnResultadosPlanoInclinado"
+                        style="@style/PhysilabButtonModuloStyle"
+                        android:layout_below="@id/wrpEdtResultadosAceleracionPlanoInclinado"
+                        android:background="@drawable/button_physilab"
+                        android:enabled="false"
+                        android:onClick="evaluarDatosPlanoInclinado"
+                        android:text="@string/general.button.evaluarResultados" />
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

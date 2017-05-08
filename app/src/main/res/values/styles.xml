@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="PhysilabAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Estilos Physilab+-->
+
+    <style name="PhysilabButtonLargeStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/psysilab.general.colorBlanco</item>
+        <item name="android:layout_margin">@dimen/physilab.dimenMarginLarge</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/physilab.sizeTextButtonLarge</item>
+    </style>
+
+    <style name="PhysilabButtonModuloStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/psysilab.general.colorBlanco</item>
+        <item name="android:layout_margin">@dimen/physilab.dimenMarginButtonMedium</item>
+        <item name="android:textSize">@dimen/physilab.sizeTextButtonMedium</item>
+    </style>
+
+    <style name="PhysilabTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/psysilab.general.colorBlanco</item>
+        <item name="android:background">@color/psysilab.title.colorTitle</item>
+        <item name="android:layout_margin">@dimen/physilab.dimenMarginLarge</item>
+        <item name="android:padding">@dimen/physilab.dimenPaddingLarge</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/physilab.sizeTextTitle</item>
+    </style>
+
+    <style name="PhysilabEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/physilab.dimenMarginLarge</item>
+        <item name="android:padding">@dimen/physilab.dimenPaddingLarge</item>
+        <item name="android:textSize">@dimen/physilab.sizeTextEditTex</item>
+    </style>
+
+    <style name="PhysilabWrapperEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="PhysilabEditResultTextStyle">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/physilab.dimenMarginLarge</item>
+        <item name="android:padding">@dimen/physilab.dimenPaddingLarge</item>
+        <item name="android:textSize">@dimen/physilab.sizeTextEditTex</item>
+    </style>
+
+    <style name="PhysilabWrapperEditResultTextStyle">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

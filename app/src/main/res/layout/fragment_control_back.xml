@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".app.Activities.Fragments.MovimientoCircularFragment">
+
+    <Button
+        android:id="@+id/btnRegresar"
+        style="@style/PhysilabButtonModuloStyle"
+        android:background="@drawable/button_physilab"
+        android:text="@string/general.button.regresar"
+        android:onClick="controlBack" />
+
+</FrameLayout>
